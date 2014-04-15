@@ -54,8 +54,8 @@ BEGIN
     "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
     "LANGUAGE 4, 2\r\n"
     "#pragma code_page(936)\r\n"
-    "#include ""res\\MyEncryption.rc2""  // ??è? Microsoft Visual C++ ?¨¤?§?è?-|¨???¨￠?§o???\r\n"
-    "#include ""l.CHS\\afxres.rc""      // ?¨¤?§o?¨￠??¨￠?§|?t\r\n"
+    "#include ""res\\EncrytFileName.rc2""  // ·? Microsoft Visual C++ ±à?-μ?×ê?′\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ±ê×?×é?t\r\n"
     "#endif\r\n"
     "\0"
 END
@@ -70,7 +70,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\MyEncryption.ico"
+IDR_MAINFRAME           ICON                    "res\\EncrytFileName.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -79,30 +79,23 @@ IDR_MAINFRAME           ICON                    "res\\MyEncryption.ico"
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 MyEncryption"
+CAPTION "关于 EncrytFileName"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "MyEncryption，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "EncrytFileName，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2014",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
-IDD_MYENCRYPTION_DIALOG DIALOGEX 0, 0, 141, 124
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+IDD_ENCRYTFILENAME_DIALOG DIALOGEX 0, 0, 317, 192
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
-CAPTION "MyEncryption"
-FONT 16, "华文隶书", 400, 0, 0x86
+CAPTION "EncrytFileName"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    PUSHBUTTON      "关闭",IDCANCEL,76,88,50,20
-    CTEXT           "PNG",IDC_STATIC,17,22,13,8
-    CTEXT           "0",IDC_PNG_COUNT,34,22,35,8
-    CTEXT           "FILE",IDC_STATIC,15,42,17,8
-    CTEXT           "0",IDC_FILE_COUNT,34,42,33,8
-    DEFPUSHBUTTON   "",ID_BTNTYPE,7,58,66,20
-    PUSHBUTTON      "加密",ID_ISENCRY,83,58,50,19
-    PUSHBUTTON      "生成",IDC_BUTTON2,16,89,50,19
-    CONTROL         "是否删除原文件",IDC_CHECKDEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,72,41,60,10
+    CTEXT           "文件数目",IDC_STATIC,22,43,68,10,0,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "加密",IDC_BUTTON1,38,97,68,27
 END
 
 
@@ -131,9 +124,9 @@ BEGIN
             VALUE "CompanyName", "TODO: <公司名>"
             VALUE "FileDescription", "TODO: <文件说明>"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "MyEncryption.exe"
+            VALUE "InternalName", "EncrytFileName.exe"
             VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
-            VALUE "OriginalFilename", "MyEncryption.exe"
+            VALUE "OriginalFilename", "EncrytFileName.exe"
             VALUE "ProductName", "TODO: <产品名>"
             VALUE "ProductVersion", "1.0.0.1"
         END
@@ -161,12 +154,12 @@ BEGIN
         BOTTOMMARGIN, 55
     END
 
-    IDD_MYENCRYPTION_DIALOG, DIALOG
+    IDD_ENCRYTFILENAME_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 136
+        RIGHTMARGIN, 310
         TOPMARGIN, 7
-        BOTTOMMARGIN, 117
+        BOTTOMMARGIN, 185
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -179,7 +172,7 @@ END
 
 STRINGTABLE 
 BEGIN
-    IDS_ABOUTBOX            "关于 MyEncryption(&A)..."
+    IDS_ABOUTBOX            "关于 EncrytFileName(&A)..."
 END
 
 #endif    // 中文(中华人民共和国) resources
@@ -200,8 +193,8 @@ END
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
 #pragma code_page(936)
-#include "res\MyEncryption.rc2"  // ?¤? Microsoft Visual C++ ?à¨¤?-|ì??á¨o???
-#include "l.CHS\afxres.rc"      // ?à¨o?á??á¨|?t
+#include "res\EncrytFileName.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
 #endif
 
 /////////////////////////////////////////////////////////////////////////////

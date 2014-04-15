@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyEncryption", "MyEncryption\MyEncryption.vcproj", "{3BE80E3E-65EF-448B-876C-2B7541EE280A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenameFile", "E:\panc++\游戏\重命名文件程序\RenameFile\RenameFile\RenameFile.vcproj", "{E4340E57-7550-4866-8AC8-CC26EEB39B82}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncrytFileName", "EncrytFileName\EncrytFileName.vcproj", "{1869C720-2A99-4397-AE90-C76863ABB391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,10 @@ Global
 		{3BE80E3E-65EF-448B-876C-2B7541EE280A}.Debug|Win32.Build.0 = Debug|Win32
 		{3BE80E3E-65EF-448B-876C-2B7541EE280A}.Release|Win32.ActiveCfg = Release|Win32
 		{3BE80E3E-65EF-448B-876C-2B7541EE280A}.Release|Win32.Build.0 = Release|Win32
-		{E4340E57-7550-4866-8AC8-CC26EEB39B82}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E4340E57-7550-4866-8AC8-CC26EEB39B82}.Debug|Win32.Build.0 = Debug|Win32
-		{E4340E57-7550-4866-8AC8-CC26EEB39B82}.Release|Win32.ActiveCfg = Release|Win32
-		{E4340E57-7550-4866-8AC8-CC26EEB39B82}.Release|Win32.Build.0 = Release|Win32
+		{1869C720-2A99-4397-AE90-C76863ABB391}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1869C720-2A99-4397-AE90-C76863ABB391}.Debug|Win32.Build.0 = Debug|Win32
+		{1869C720-2A99-4397-AE90-C76863ABB391}.Release|Win32.ActiveCfg = Release|Win32
+		{1869C720-2A99-4397-AE90-C76863ABB391}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

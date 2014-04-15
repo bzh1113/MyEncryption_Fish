@@ -1,12 +1,12 @@
 #include "StdAfx.h"
 #include "PngEncrytion.h"
-
+#include "CommonString.h"
 
 
 
 PngEncrytion::PngEncrytion(void)
 {
-	m_strChangeName = ".zhb";
+	m_strChangeName = ".wuji";
 }
 
 PngEncrytion::~PngEncrytion(void)
@@ -55,7 +55,7 @@ void PngEncrytion::EncryptionFunc( unsigned char* pBuffer,unsigned long nSize )
 	{
 		for (int i=0; i<nSize; i++)
 		{
-			((unsigned char*)pBuffer)[i] ^= szEncrypStr[i%16];
+			((unsigned char*)pBuffer)[i] ^= szPngEncrypStr[i%32];
 		}
 	}
 }
@@ -65,13 +65,13 @@ void PngEncrytion::WriteToFile( const char* pszFileName, const unsigned char* pB
 	std::string NewPath(pszFileName);
 	if (bIsDecrypt)//½âÃÜ
 	{
-		CString temp = DeleteEecryptFileKindStr(pszFileName,m_strChangeName.c_str());
+		CString temp = DeleteEecryptFileKindStr(pszFileName,CHANGE_FILENAME_STR);
 		std::string tempNewPath(temp.GetBuffer());
 		NewPath=tempNewPath;
 	}
 	else	//¼ÓÃÜ
 	{
-		NewPath += m_strChangeName;
+		NewPath += CHANGE_FILENAME_STR;
 	}
 	FILE *fp = fopen(NewPath.c_str(), "wb");
 	ASSERT(fp);
@@ -94,7 +94,7 @@ void PngEncrytion::DecryptFunc( unsigned char* pBuffer,unsigned long nSize )
 	{
 		for (int i=0; i<nSize; i++)
 		{
-			((unsigned char*)pBuffer)[i] ^= szEncrypStr[i%16];
+			((unsigned char*)pBuffer)[i] ^= szPngEncrypStr[i%32];
 		}
 	}
 }

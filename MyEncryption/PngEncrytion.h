@@ -3,7 +3,8 @@
 #include "vector"
 using namespace std;
 
-const char szEncrypStr[16] = {'b','e','c','a','u','s','e','i','s','p','n','g',13,14,15,16};
+const char szPngEncrypStr[32] = {'b','e','c','a','u','s','e','i','s','p','n','g',13,14,15,16,
+								'p','n','g','i','s','s','o','b','e','a','u','t','i','f','u','l'};
 
 class PngEncrytion : public MainEncrytion
 {
